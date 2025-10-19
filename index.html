@@ -553,10 +553,10 @@ function typeWriter(element, text, speed, callback) {
 // --- Bắt đầu hiệu ứng ---
 window.addEventListener("load", () => {
     // Gõ phần tiêu đề trước
-    typeWriter(strongText, fullStrongText, 20, () => {
+    typeWriter(strongText, fullStrongText, 140, () => {
         // Sau khi xong, đợi 1s rồi gõ phần nội dung
         setTimeout(() => {
-            typeWriter(spanText, fullSpanText, 200);
+            typeWriter(spanText, fullSpanText, 1600);
         }, 1000);
     });
 });
@@ -579,5 +579,6 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
