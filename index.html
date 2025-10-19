@@ -551,18 +551,12 @@ function typeWriter(element, text, speed, callback) {
 }
 
 
-// --- Bắt đầu hiệu ứng ---
 window.addEventListener("load", () => {
-    // Kiểm tra màn hình nhỏ (điện thoại)
-    const isMobile = window.innerWidth <= 768;
-    const speed = isMobile ? 15 : 30; // 15ms trên điện thoại, 30ms trên máy tính
-
     // Gõ phần tiêu đề trước
-    typeWriter(strongText, fullStrongText, speed, () => {
-        // Sau khi xong, đợi 0.5s rồi gõ phần nội dung
+    typeWriter(strongText, fullStrongText, 70, () => {
         setTimeout(() => {
-            typeWriter(spanText, fullSpanText, speed);
-        }, 500);
+            typeWriter(spanText, fullSpanText, 1000);
+        }, 1000);
     });
 });
         document.body.addEventListener("click", function () {
@@ -582,6 +576,7 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
 
