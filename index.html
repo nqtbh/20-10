@@ -553,12 +553,15 @@ function typeWriter(element, text, speed, callback) {
 
 window.addEventListener("load", () => {
     const isMobile = window.innerWidth <= 768;
-    const speed = isMobile ? 15 : 30;
+    const titleSpeed = isMobile ? 15 : 30;
+    const contentSpeed = isMobile ? 5 : 25;
 
-    typeWriter(strongText, fullStrongText, speed, () => {
+    // Gõ tiêu đề
+    typeWriter(strongText, fullStrongText, titleSpeed, () => {
+        // Gõ nội dung sau 300ms
         setTimeout(() => {
-            typeWriter(spanText, fullSpanText, speed);
-        }, 500);
+            typeWriter(spanText, fullSpanText, contentSpeed);
+        }, 300);
     });
 });
         document.body.addEventListener("click", function () {
@@ -578,6 +581,7 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
 
