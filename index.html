@@ -552,11 +552,13 @@ function typeWriter(element, text, speed, callback) {
 
 
 window.addEventListener("load", () => {
-    // Gõ phần tiêu đề trước
-    typeWriter(strongText, fullStrongText, 70, () => {
+    const isMobile = window.innerWidth <= 768;
+    const speed = isMobile ? 15 : 30;
+
+    typeWriter(strongText, fullStrongText, speed, () => {
         setTimeout(() => {
-            typeWriter(spanText, fullSpanText, 1000);
-        }, 1000);
+            typeWriter(spanText, fullSpanText, speed);
+        }, 500);
     });
 });
         document.body.addEventListener("click", function () {
@@ -576,6 +578,7 @@ window.addEventListener("load", () => {
 
 
 </html>
+
 
 
 
